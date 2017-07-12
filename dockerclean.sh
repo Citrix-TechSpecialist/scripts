@@ -6,4 +6,4 @@ docker kill $(docker ps -q)
 printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)
 
 # Delete all untagged images.
-printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)
+printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q)
